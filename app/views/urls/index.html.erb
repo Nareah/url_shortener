@@ -1,0 +1,17 @@
+<html>
+  <body>
+      <%= link_to "New URL", new_url_path %>
+      <p>List of All URLs:</p>
+
+      <% @urls.each do |url| %>
+        <br>
+        Original URL: <%=url.original_url %> <br>
+        Short URL: http://localhost:3001/<%=url.short_url %><br>
+        <br>
+        Number of visits: <%= url.no_of_visits %> <br>
+        Ip Address: <%= url.ip_address %><br>
+        Country: <%= url.countries.join(",  ") %><br>
+        ---------------------------------------------------------<br>
+      <% end %>
+  </body>
+</html>

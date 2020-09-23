@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <center>
+      <h5 style="float: right;">
+        <%= link_to "All URL list", urls_path %>
+      </h5>
+      <h2>Welcome to short.com</h2>
+
+      <%= form_for(@url, remote: true) do |f| %>
+          <div class="field">
+            <%= f.label :"Enter your URL here" %>
+            <%= f.text_field :original_url, style:"width:60em" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit value: "SHORTON"%>
+          </div>
+      <% end %>
+    </center>
+    <div id="short_url_div"></div>
+  </body>
+</html>
